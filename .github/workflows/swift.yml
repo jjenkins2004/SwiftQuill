@@ -20,5 +20,5 @@ jobs:
     # The 'test' command builds AND tests in one go.
     - name: Run tests
       run: | # Use a multi-line run block for clarity
-        xcodebuild test -scheme SwiftQuill-Package \
+        xcodebuild test -scheme SwiftQuill \
                         -destination 'platform=iOS Simulator,name=iPhone 15 Pro'
