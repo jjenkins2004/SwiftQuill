@@ -10,15 +10,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test: # Renamed for clarity
+  build-and-test:
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4
     
-    # You don't need a separate "Build" step. 
-    # The 'test' command builds AND tests in one go.
     - name: Run tests
-      run: | # Use a multi-line run block for clarity
+      run: |
         xcodebuild test -scheme SwiftQuill \
-                        -destination 'platform=iOS Simulator,name=iPhone 15 Pro'
+                        -destination 'platform=iOS Simulator,name=Any iOS Simulator Device'
