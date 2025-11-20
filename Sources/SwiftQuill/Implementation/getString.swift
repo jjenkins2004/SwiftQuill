@@ -8,7 +8,7 @@
 import Foundation
 
 extension QuillDoc {
-    func getRawString() -> String {
+    public func getRawString() -> String {
         return ops.compactMap { $0.insert }.joined()
     }
 }
