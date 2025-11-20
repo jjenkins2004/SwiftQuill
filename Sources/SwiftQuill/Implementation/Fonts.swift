@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct UIFonts {
+public struct UIFonts {
     // MARK: Lifecycle
 
     init(baseFont: UIFont) {
@@ -41,12 +41,12 @@ struct UIFonts {
 
     // MARK: Internal
 
-    let baseFont: UIFont
-    let boldFont: UIFont
-    let boldDescriptor: UIFontDescriptor
-    let italicFont: UIFont
-    let italicDescriptor: UIFontDescriptor
-    let boldItalicFont: UIFont
-    let boldItalicDescriptor: UIFontDescriptor
-    let underlineStyle = NSUnderlineStyle.single.rawValue
+    public let baseFont: UIFont
+    public let boldFont: UIFont
+    public let boldDescriptor: UIFontDescriptor
+    public let italicFont: UIFont
+    public let italicDescriptor: UIFontDescriptor
+    public let boldItalicFont: UIFont
+    public let boldItalicDescriptor: UIFontDescriptor
+    public let underlineStyle = NSUnderlineStyle.single.rawValue
 }
