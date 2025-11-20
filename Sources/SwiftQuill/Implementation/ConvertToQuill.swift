@@ -41,7 +41,7 @@ extension SwiftQuill {
             // Check for Underline
             if
                 let underlineStyle = attributes[.underlineStyle] as? Int,
-                underlineStyle == NSUnderlineStyle.single.rawValue
+                underlineStyle == fonts.underlineStyle
             {
                 deltaAttributes[.underline] = true
             }

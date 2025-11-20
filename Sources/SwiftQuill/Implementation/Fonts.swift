@@ -15,26 +15,26 @@ struct UIFonts {
         self.baseFont = baseFont
 
         // Bold Font
-        let boldDescriptor = baseFont.fontDescriptor.withSymbolicTraits(.traitBold)
+        boldDescriptor = baseFont.fontDescriptor.withSymbolicTraits(.traitBold)!
         boldFont = UIFont(
-            descriptor: boldDescriptor ?? baseFont.fontDescriptor,
+            descriptor: boldDescriptor,
             size: baseFont.pointSize
         )
 
         // Italic Font
-        let italicDescriptor = baseFont.fontDescriptor.withSymbolicTraits(.traitItalic)
+        italicDescriptor = baseFont.fontDescriptor.withSymbolicTraits(.traitItalic)!
         italicFont = UIFont(
-            descriptor: italicDescriptor ?? baseFont.fontDescriptor,
+            descriptor: italicDescriptor,
             size: baseFont.pointSize
         )
 
         // Bold Italic Font
-        let boldItalicDescriptor = baseFont.fontDescriptor.withSymbolicTraits([
+        boldItalicDescriptor = baseFont.fontDescriptor.withSymbolicTraits([
             .traitBold,
             .traitItalic,
-        ])
+        ])!
         boldItalicFont = UIFont(
-            descriptor: boldItalicDescriptor ?? baseFont.fontDescriptor,
+            descriptor: boldItalicDescriptor,
             size: baseFont.pointSize
         )
     }
@@ -43,6 +43,10 @@ struct UIFonts {
 
     let baseFont: UIFont
     let boldFont: UIFont
+    let boldDescriptor: UIFontDescriptor
     let italicFont: UIFont
+    let italicDescriptor: UIFontDescriptor
     let boldItalicFont: UIFont
+    let boldItalicDescriptor: UIFontDescriptor
+    let underlineStyle = NSUnderlineStyle.single.rawValue
 }

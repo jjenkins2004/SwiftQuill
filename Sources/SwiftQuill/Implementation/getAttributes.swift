@@ -40,7 +40,7 @@ extension SwiftQuill {
 
         // Apply underlines
         if underline {
-            swiftAttributes[.underlineStyle] = NSUnderlineStyle.single.rawValue
+            swiftAttributes[.underlineStyle] = fonts.underlineStyle
         }
 
         return swiftAttributes
