@@ -13,8 +13,8 @@ public class SwiftQuill {
         fonts = UIFonts(baseFont: baseFont)
     }
 
-    let fontSize: CGFloat
-    let fonts: UIFonts
+    public let fontSize: CGFloat
+    public let fonts: UIFonts
 
     public func convertToQuill(_ attributedText: NSAttributedString) throws -> QuillDoc {
         convertAttributedToQuill(attributedText)
